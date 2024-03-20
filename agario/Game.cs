@@ -21,27 +21,34 @@ namespace agario
         public Game(Form2 form, StartingInfo startingInfo) { 
             Thread gameThread = new Thread(new ThreadStart(MainLoop));
             gameThread.IsBackground = true;
-            gameThread.Start();
             this.color = startingInfo.color;
             this.form = form;
 
 
 
             Random random = new Random();
+            for (int i = 1; i < 1000; i++)
+            {
+                ExpPoint exp = new ExpPoint();
+                exp.Position = new Vector2(random.Next(-200, 201), random.Next(-200, 201));
+            }
             for (int i = 1; i < 250; i++)
             {
                 player = new Player("obj");
-                player.Color = Color.FromArgb(random.Next(255), random.Next(255), random.Next(255));
+                player.Color = RandomColor(random);
                 player.Position = new Vector2(random.Next(-200, 201), random.Next(-200, 201));
                 player.Velocity = new Vector2(random.Next(-90, 91), random.Next(-90, 91));
                 player.Drag = 1.2f;
                 player.Size = i / 30 + 1;
             }
             player = new Player(startingInfo.playerName);
-            Start();
+            gameThread.Start();
         }
         private void MainLoop()
         {
+            Start();
+            foreach(GameObject go in GameObject.GameObjects)
+                go.Start();
             float frames = 0;
             float time = 0;
             while (true)
@@ -56,6 +63,8 @@ namespace agario
                 }
 
                 Update();
+                foreach (GameObject go in GameObject.GameObjects)
+                    go.Update(deltaTime);
                 form.Refresh();
 
                 long endTime = DateTime.Now.Ticks;
@@ -98,7 +107,7 @@ namespace agario
             player.Velocity = new Vector2(vx, vy);
             foreach(GameObject go in GameObject.GameObjects)
             {
-                go.go(deltaTime);
+                go.Go(deltaTime);
             }
         }
         private bool IsPressed(Keys key)
@@ -110,6 +119,10 @@ namespace agario
             int x = size.Width / 2 - (int)(scale * (camerax - posx));
             int y = size.Height / 2 + (int)(scale * (cameray - posy));
             return new Point(x, y);
+        }
+        public static Color RandomColor(Random random)
+        {
+            return Color.FromArgb(random.Next(255), random.Next(255), random.Next(255));
         }
     }
 }
