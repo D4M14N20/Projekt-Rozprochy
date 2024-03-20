@@ -1,0 +1,11 @@
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\bin\Release\agario.exe.config
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\bin\Release\agario.exe
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\bin\Release\agario.pdb
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\obj\Release\agario.csproj.AssemblyReference.cache
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\obj\Release\agario.Form1.resources
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\obj\Release\agario.Form2.resources
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\obj\Release\agario.Properties.Resources.resources
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\obj\Release\agario.csproj.GenerateResource.cache
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\obj\Release\agario.csproj.CoreCompileInputs.cache
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\obj\Release\agario.exe
+C:\Users\damia\OneDrive\Pulpit\projektRozproszone\agario\agario\obj\Release\agario.pdb
