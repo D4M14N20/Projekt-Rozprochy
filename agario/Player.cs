@@ -53,7 +53,7 @@ namespace agario
                     else if (go.GetType() == typeof(Player))
                     {
                         Player pl = (Player)go;
-                        if ((go.Position - Position).Magnitude < Size+pl.Size&&Size>pl.Size)
+                        if ((go.Position - Position).Magnitude < Size&&Size>pl.Size)
                         {
                             go.Destroy();
                             Size = (float)Math.Sqrt(Size * Size + pl.Size+pl.Size);
