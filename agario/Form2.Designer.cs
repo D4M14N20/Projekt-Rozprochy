@@ -29,25 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.labelf2 = new System.Windows.Forms.Label();
             this.fpsLabel = new System.Windows.Forms.Label();
             this.positionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // labelf2
-            // 
-            this.labelf2.AutoSize = true;
-            this.labelf2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
-            this.labelf2.Location = new System.Drawing.Point(222, 63);
-            this.labelf2.Name = "labelf2";
-            this.labelf2.Size = new System.Drawing.Size(44, 16);
-            this.labelf2.TabIndex = 1;
-            this.labelf2.Text = "label1";
-            // 
             // fpsLabel
             // 
             this.fpsLabel.AutoSize = true;
-            this.fpsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.fpsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(69)))), ((int)(((byte)(86)))));
+            this.fpsLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.fpsLabel.Location = new System.Drawing.Point(12, 9);
             this.fpsLabel.Name = "fpsLabel";
             this.fpsLabel.Size = new System.Drawing.Size(44, 16);
@@ -56,40 +46,43 @@
             // 
             // positionLabel
             // 
-            this.positionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.positionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.positionLabel.AutoSize = true;
-            this.positionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
-            this.positionLabel.Location = new System.Drawing.Point(744, 425);
+            this.positionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(69)))), ((int)(((byte)(86)))));
+            this.positionLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.positionLabel.Location = new System.Drawing.Point(15, 746);
             this.positionLabel.Name = "positionLabel";
             this.positionLabel.Size = new System.Drawing.Size(44, 16);
             this.positionLabel.TabIndex = 1;
             this.positionLabel.Text = "label1";
+            this.positionLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.positionLabel.Click += new System.EventHandler(this.positionLabel_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(39)))), ((int)(((byte)(37)))));
+            this.ClientSize = new System.Drawing.Size(1381, 773);
             this.Controls.Add(this.fpsLabel);
             this.Controls.Add(this.positionLabel);
-            this.Controls.Add(this.labelf2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "Agario-Gra";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form2_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseDown);
+            this.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.Form2_MW);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label labelf2;
         private System.Windows.Forms.Label fpsLabel;
         private System.Windows.Forms.Label positionLabel;
     }

@@ -14,9 +14,17 @@ namespace agario
         public ExpPoint()
         {
             Color = Game.RandomColor(random);
+            Initialize();
+        }
+        public ExpPoint(Vector2 position)
+        {
+            Random random = new Random((int)(position.x*position.y));
+            Color = Game.RandomColor(random);
+            this.Position = position;
+            Initialize();
         }
         SolidBrush circleBrush = new SolidBrush(Color.White);
-        public override void Draw(Graphics g, float camerax, float cameray, Size size, float scale = 1.0f)
+        public override void Draw(Graphics g, double camerax, double cameray, Size size, double scale = 1.0f)
         {
             int x = GetScreenPosition(camerax, cameray, size, scale).X;
             int y = GetScreenPosition(camerax, cameray, size, scale).Y;
@@ -29,7 +37,7 @@ namespace agario
         {
 
         }
-        public override void Update(float time)
+        public override void Update(double time)
         {
 
         }

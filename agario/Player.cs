@@ -5,63 +5,115 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace agario
 {
     internal class Player : GameObject
     {
-        public Color Color { get { return circleBrush.Color; } set { circleBrush.Color = value; borderPen.Color = Color.FromArgb(value.R/2, value.G/2, value.B/2); } }
+        public Color Color { get { return circleBrush.Color; } set { lock(this) circleBrush.Color = value; borderPen.Color = Color.FromArgb(value.R / 2, value.G / 2, value.B / 2); } }
         private static Player player;
-        public static Player MPlayer { get { return player; } }
-        public float Size {get; set; }
+        public static Player MPlayer { get { return player; } set { player = value; } }
+        public double Size { get; set; }
+        public double R { get { return (double)(Math.Sqrt(Size/Math.PI)); } }
+        private bool phantom = false;
+        public bool Phantom { get { return phantom; } set { phantom = value; if (value) Color = Color.FromArgb(50, Color); } }
         public Player(string name) {
             this.Name = name;
-            player = this;
-            Size = 2.5f;
+            if(player == null)
+                player = this;
+            Size = 3.14f;
+            Drag = 1.0f;
+            Initialize();
+        }
+        public Player(string name, PlayerState ps)
+        {
+            this.Name = name;
+            if (player == null)
+                player = this;
+            Position = new Vector2(ps.posX, ps.posY);
+            Velocity = new Vector2(ps.vX, ps.vY);
+            Size = ps.size;
+            Color = ps.color;
+            Drag = 1.0f;
+            Initialize();
         }
         private Pen borderPen = new Pen(Color.Gray, 5);
         private SolidBrush circleBrush = new SolidBrush(Color.White);
-        public override void Draw(Graphics g, float camerax, float cameray, Size size, float scale=1.0f)
+        private SolidBrush FontBrush = new SolidBrush(Color.FromArgb(20, 10, 10));
+        private SolidBrush FontBrush2 = new SolidBrush(Color.WhiteSmoke);
+        public override void Draw(Graphics g, double camerax, double cameray, Size size, double scale = 1.0f)
         {
             int x = GetScreenPosition(camerax, cameray, size, scale).X;
             int y = GetScreenPosition(camerax, cameray, size, scale).Y;
-            int r = (int)(Size*scale);
+            int r = (int)(Size * scale);
 
+            borderPen.Width = (float)(scale/4.0);
             // Rysowanie koła
-            g.FillEllipse(circleBrush, x - r, y - r, 2 * r, 2 * r);
-            // Rysowanie obramowania koła
-            g.DrawEllipse(borderPen, x - r, y - r, 2 * r, 2 * r);
+            lock (this)
+            {
+                g.FillEllipse(circleBrush, x - r, y - r, 2 * r, 2 * r);
+                // Rysowanie obramowania koła
+                g.DrawEllipse(borderPen, x - r, y - r, 2 * r, 2 * r);
+            }
+
+
+            StringFormat sf = new StringFormat();
+            sf.Alignment = StringAlignment.Center;
+            sf.LineAlignment = StringAlignment.Center;
+
+            Font font = new Font("Arial", (float)Math.Max(scale*R, 1));
+            Font font2 = new Font("Arial", (float)Math.Max(scale*R, 1));
+            if(Color.GetBrightness()<0.5f)
+                g.DrawString(Name, font2, FontBrush2, new PointF(x, y), sf);
+            else
+                g.DrawString(Name, font, FontBrush, new PointF(x, y), sf);
+
+            font.Dispose();
+            font2.Dispose();
+            sf.Dispose();
+
         }
         public override void Start()
         {
 
         }
-        public override void Update(float time)
+        public override void Update(double time)
         {
-            if(Player.MPlayer == this)
+            if (Player.MPlayer == this)
             {
-                foreach(GameObject go in GameObject.GameObjects)
+                foreach (GameObject go in GameObject.GameObjects)
                 {
-                    if(go.GetType() == typeof(ExpPoint))
+                    if (go.GetType() == typeof(ExpPoint))
                     {
-                        if((go.Position-Position).Magnitude < Size) {
+                        if ((go.Position - Position).Magnitude < Size) {
+                            Size = (double)Math.Sqrt(Size * Size + 1);
                             go.Destroy();
-                            Size=(float)Math.Sqrt(Size*Size+1);
+                            Task.Run(() => { NewClient.Eat(go.Position); });
                         }
                         
                     }
-                    else if (go.GetType() == typeof(Player))
+                    else if (go.GetType() == typeof(Player) && this != go)
                     {
                         Player pl = (Player)go;
-                        if ((go.Position - Position).Magnitude < Size&&Size>pl.Size)
+                        if (!pl.Phantom && (go.Position - Position).Magnitude < Size && Size > pl.Size)//*1.2f)
                         {
                             go.Destroy();
-                            Size = (float)Math.Sqrt(Size * Size + pl.Size+pl.Size);
+                            Task.Run(() => { NewClient.Kill(pl.Name); });
+                            Size = (double)Math.Sqrt(Size * Size + pl.Size + pl.Size);
                         }
                     }
-
                 }
+               
             }
         }
+        public void Set(PlayerState ps)
+        {
+            Position = new Vector2(ps.posX, ps.posY);
+            Velocity = new Vector2(ps.vX, ps.vY);
+            Size = ps.size;
+            Color = ps.color;
+        }
+        
     }
 }

@@ -3,48 +3,96 @@
   "WorkspaceRootPath": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\agario\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\agario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\agario\\newclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\newclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\exppoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\exppoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\startinginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\startinginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\025c0bfcd02c0ff03eba52b5e3b7ea3d64182ba1c7c9818ee29f0ab8ae6c905f\\SolidBrush.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\91a62bad6fec826d669ef592114a3cee96acc10afca1f77488ad8a5d19bfdf0d\\Enumerable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\c18972b8493bd204e66ed6bfd7e3571cc3f124ae53d7d86b539a697a66777558\\Control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\3f3f51af6d969aac506a375074472ce4d12ca86527131ffde56df46d8c87323c\\NativeWindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\9b1c4965f4a257075b18f048692a7c960f5a36a7330c234f5602855e9e3c0170\\Application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\816db7572a104e99d16a398d67f7185be744824b6bc90ad99391def5de167442\\Buffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a29b73c465fd17642cc67ab2e74af3f128674c6bab44669bea94144b840198\\List.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\form2.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\form2.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\a0ba157c3da7618242a918b0d3672ed23b17a0736b036eaa6ba70e7b45644ad8\\Graphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{50A3187C-1BC1-4CEB-BBD6-D908895DD76B}|agario\\agario.csproj|solutionrelative:agario\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,78 +110,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Client.cs",
-              "RelativeDocumentMoniker": "agario\\Client.cs",
-              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Client.cs",
-              "RelativeToolTip": "agario\\Client.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAIwCcAAAAJAAAA",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Player.cs",
+              "RelativeDocumentMoniker": "agario\\Player.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Player.cs",
+              "RelativeToolTip": "agario\\Player.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAYwC8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T08:59:32.98Z",
+              "WhenOpened": "2024-03-20T19:39:12.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form1.cs",
               "RelativeDocumentMoniker": "agario\\Form1.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form1.cs",
               "RelativeToolTip": "agario\\Form1.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAQwDkAAAAWAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAwwD4AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:13:55.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-21T10:13:55.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Projekt]",
-              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form1.cs",
-              "RelativeDocumentMoniker": "agario\\Form1.cs",
-              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form1.cs [Projekt]",
-              "RelativeToolTip": "agario\\Form1.cs [Projekt]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T10:13:01.07Z",
-              "EditorCaption": " [Projekt]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Vector2.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Vector2.cs",
-              "RelativeDocumentMoniker": "agario\\Vector2.cs",
-              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Vector2.cs",
-              "RelativeToolTip": "agario\\Vector2.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T20:40:08.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ExpPoint.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\ExpPoint.cs",
-              "RelativeDocumentMoniker": "agario\\ExpPoint.cs",
-              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\ExpPoint.cs",
-              "RelativeToolTip": "agario\\ExpPoint.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBsAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T20:28:59.298Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\GameObject.cs",
               "RelativeDocumentMoniker": "agario\\GameObject.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\GameObject.cs",
               "RelativeToolTip": "agario\\GameObject.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAA/wCgAAAAOAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAywCEAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T19:40:01.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T19:40:01.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form2.cs [Projekt]",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.cs",
+              "RelativeDocumentMoniker": "agario\\Form2.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.cs [Projekt]",
+              "RelativeToolTip": "agario\\Form2.cs [Projekt]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T21:07:15.945Z"
             },
             {
               "$type": "Document",
@@ -143,50 +164,74 @@
               "RelativeDocumentMoniker": "agario\\Form2.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.cs",
               "RelativeToolTip": "agario\\Form2.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAQwFcAAAAjAAAA",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAjwI8AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T21:07:26.356Z",
+              "WhenOpened": "2024-03-20T21:07:26.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vector2.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Vector2.cs",
+              "RelativeDocumentMoniker": "agario\\Vector2.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Vector2.cs",
+              "RelativeToolTip": "agario\\Vector2.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAkwDAAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T20:40:08.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form2.cs [Projekt]",
-              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.cs",
-              "RelativeDocumentMoniker": "agario\\Form2.cs",
-              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.cs [Projekt]",
-              "RelativeToolTip": "agario\\Form2.cs [Projekt]",
+              "DocumentIndex": 0,
+              "Title": "NewClient.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\NewClient.cs",
+              "RelativeDocumentMoniker": "agario\\NewClient.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\NewClient.cs",
+              "RelativeToolTip": "agario\\NewClient.cs",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAYwNwAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T21:07:15.945Z",
-              "EditorCaption": " [Projekt]"
+              "WhenOpened": "2024-03-23T12:44:24.367Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Game.cs",
               "RelativeDocumentMoniker": "agario\\Game.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Game.cs",
               "RelativeToolTip": "agario\\Game.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwB0AAAAiAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T19:33:34.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Player.cs",
-              "RelativeDocumentMoniker": "agario\\Player.cs",
-              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Player.cs",
-              "RelativeToolTip": "agario\\Player.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAowDMAAAAVAAAA",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs [Projekt]",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form1.cs",
+              "RelativeDocumentMoniker": "agario\\Form1.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form1.cs [Projekt]",
+              "RelativeToolTip": "agario\\Form1.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T19:39:12.908Z"
+              "WhenOpened": "2024-03-21T10:13:01.07Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\packages.config",
+              "RelativeDocumentMoniker": "agario\\packages.config",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\packages.config",
+              "RelativeToolTip": "agario\\packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-22T19:24:28.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "StartingInfo.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\StartingInfo.cs",
               "RelativeDocumentMoniker": "agario\\StartingInfo.cs",
@@ -195,6 +240,178 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T20:40:29.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExpPoint.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\ExpPoint.cs",
+              "RelativeDocumentMoniker": "agario\\ExpPoint.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\ExpPoint.cs",
+              "RelativeToolTip": "agario\\ExpPoint.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T20:28:59.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlayerState.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\PlayerState.cs",
+              "RelativeDocumentMoniker": "agario\\PlayerState.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\PlayerState.cs",
+              "RelativeToolTip": "agario\\PlayerState.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAnwCEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T14:02:49.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Program.cs",
+              "RelativeDocumentMoniker": "agario\\Program.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Program.cs",
+              "RelativeToolTip": "agario\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:03:01.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Control.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\c18972b8493bd204e66ed6bfd7e3571cc3f124ae53d7d86b539a697a66777558\\Control.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\c18972b8493bd204e66ed6bfd7e3571cc3f124ae53d7d86b539a697a66777558\\Control.cs",
+              "ToolTip": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\c18972b8493bd204e66ed6bfd7e3571cc3f124ae53d7d86b539a697a66777558\\Control.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\c18972b8493bd204e66ed6bfd7e3571cc3f124ae53d7d86b539a697a66777558\\Control.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAiwIcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T19:11:16.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SolidBrush.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\025c0bfcd02c0ff03eba52b5e3b7ea3d64182ba1c7c9818ee29f0ab8ae6c905f\\SolidBrush.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\025c0bfcd02c0ff03eba52b5e3b7ea3d64182ba1c7c9818ee29f0ab8ae6c905f\\SolidBrush.cs",
+              "ToolTip": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\025c0bfcd02c0ff03eba52b5e3b7ea3d64182ba1c7c9818ee29f0ab8ae6c905f\\SolidBrush.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\025c0bfcd02c0ff03eba52b5e3b7ea3d64182ba1c7c9818ee29f0ab8ae6c905f\\SolidBrush.cs[Tylko do odczytu]",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAewGoAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T12:07:31.066Z",
+              "EditorCaption": "[Tylko do odczytu]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Enumerable.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\91a62bad6fec826d669ef592114a3cee96acc10afca1f77488ad8a5d19bfdf0d\\Enumerable.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\91a62bad6fec826d669ef592114a3cee96acc10afca1f77488ad8a5d19bfdf0d\\Enumerable.cs",
+              "ToolTip": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\91a62bad6fec826d669ef592114a3cee96acc10afca1f77488ad8a5d19bfdf0d\\Enumerable.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\91a62bad6fec826d669ef592114a3cee96acc10afca1f77488ad8a5d19bfdf0d\\Enumerable.cs[Tylko do odczytu]",
+              "ViewState": "AQIAALIIAAAAAAAAAAAiwMwIAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T11:52:25.239Z",
+              "EditorCaption": "[Tylko do odczytu]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Buffer.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\816db7572a104e99d16a398d67f7185be744824b6bc90ad99391def5de167442\\Buffer.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\816db7572a104e99d16a398d67f7185be744824b6bc90ad99391def5de167442\\Buffer.cs",
+              "ToolTip": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\816db7572a104e99d16a398d67f7185be744824b6bc90ad99391def5de167442\\Buffer.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\816db7572a104e99d16a398d67f7185be744824b6bc90ad99391def5de167442\\Buffer.cs[Tylko do odczytu]",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T11:52:41.48Z",
+              "EditorCaption": "[Tylko do odczytu]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NativeWindow.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\3f3f51af6d969aac506a375074472ce4d12ca86527131ffde56df46d8c87323c\\NativeWindow.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3f3f51af6d969aac506a375074472ce4d12ca86527131ffde56df46d8c87323c\\NativeWindow.cs",
+              "ToolTip": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\3f3f51af6d969aac506a375074472ce4d12ca86527131ffde56df46d8c87323c\\NativeWindow.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3f3f51af6d969aac506a375074472ce4d12ca86527131ffde56df46d8c87323c\\NativeWindow.cs[Tylko do odczytu]",
+              "ViewState": "AQIAAMsCAAAAAAAAAAAiwOUCAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T11:53:55.334Z",
+              "EditorCaption": "[Tylko do odczytu]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Application.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\9b1c4965f4a257075b18f048692a7c960f5a36a7330c234f5602855e9e3c0170\\Application.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\9b1c4965f4a257075b18f048692a7c960f5a36a7330c234f5602855e9e3c0170\\Application.cs",
+              "ToolTip": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\9b1c4965f4a257075b18f048692a7c960f5a36a7330c234f5602855e9e3c0170\\Application.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\9b1c4965f4a257075b18f048692a7c960f5a36a7330c234f5602855e9e3c0170\\Application.cs",
+              "ViewState": "AQIAADoBAAAAAAAAAAAiwFQBAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T19:51:05.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a29b73c465fd17642cc67ab2e74af3f128674c6bab44669bea94144b840198\\List.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a29b73c465fd17642cc67ab2e74af3f128674c6bab44669bea94144b840198\\List.cs",
+              "ToolTip": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a29b73c465fd17642cc67ab2e74af3f128674c6bab44669bea94144b840198\\List.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a29b73c465fd17642cc67ab2e74af3f128674c6bab44669bea94144b840198\\List.cs",
+              "ViewState": "AQIAAOgCAAAAAAAAAAAiwAIDAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T19:14:48.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Form2.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.Designer.cs",
+              "RelativeDocumentMoniker": "agario\\Form2.Designer.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.Designer.cs",
+              "RelativeToolTip": "agario\\Form2.Designer.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAApwE4AAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T20:51:07.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Form2.resx",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.resx",
+              "RelativeDocumentMoniker": "agario\\Form2.resx",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\Form2.resx",
+              "RelativeToolTip": "agario\\Form2.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-03-23T20:52:51.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Graphics.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\a0ba157c3da7618242a918b0d3672ed23b17a0736b036eaa6ba70e7b45644ad8\\Graphics.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\a0ba157c3da7618242a918b0d3672ed23b17a0736b036eaa6ba70e7b45644ad8\\Graphics.cs",
+              "ToolTip": "C:\\Users\\damia\\AppData\\Local\\Temp\\.vsdbgsrc\\a0ba157c3da7618242a918b0d3672ed23b17a0736b036eaa6ba70e7b45644ad8\\Graphics.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\a0ba157c3da7618242a918b0d3672ed23b17a0736b036eaa6ba70e7b45644ad8\\Graphics.cs[Tylko do odczytu]",
+              "ViewState": "AQIAAHUSAAAAAAAAAAAYwKoSAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T19:12:32.852Z",
+              "EditorCaption": "[Tylko do odczytu]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\App.config",
+              "RelativeDocumentMoniker": "agario\\App.config",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\agario\\App.config",
+              "RelativeToolTip": "agario\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-23T14:18:01.924Z"
             }
           ]
         }
