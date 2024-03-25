@@ -50,7 +50,7 @@ namespace agario
         }
         public override string ToString()
         {
-            return "{"+Math.Round(x, 5)+":"+ Math.Round(y, 0) + "}";
+            return "{"+Math.Round(x, 0)+":"+ Math.Round(y, 0) + "}";
         }
         public string ToString2()
         {

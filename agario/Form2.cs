@@ -111,7 +111,10 @@ namespace agario
                 if(go==null)
                     continue; 
                 Point z = go.GetScreenPosition(Camerax, Cameray, Size, Zoom);
-                if (z.X < -200 || z.X > Size.Width + 200 || z.Y < -200 || z.Y > Size.Height + 200)
+                double r = 1;
+                if(go.GetType()==typeof(Player))
+                    r = ((Player)go).Size;
+                if (z.X < -r || z.X > Size.Width + r || z.Y < -r || z.Y > Size.Height + r)
                     continue;
                 go.Draw(e.Graphics, Camerax, Cameray, Size, Zoom);
         
