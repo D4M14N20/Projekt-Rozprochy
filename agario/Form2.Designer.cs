@@ -38,9 +38,10 @@
             this.fpsLabel.AutoSize = true;
             this.fpsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(69)))), ((int)(((byte)(86)))));
             this.fpsLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fpsLabel.Location = new System.Drawing.Point(12, 9);
+            this.fpsLabel.Location = new System.Drawing.Point(9, 7);
+            this.fpsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fpsLabel.Name = "fpsLabel";
-            this.fpsLabel.Size = new System.Drawing.Size(44, 16);
+            this.fpsLabel.Size = new System.Drawing.Size(35, 13);
             this.fpsLabel.TabIndex = 1;
             this.fpsLabel.Text = "label1";
             // 
@@ -50,9 +51,10 @@
             this.positionLabel.AutoSize = true;
             this.positionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(69)))), ((int)(((byte)(86)))));
             this.positionLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.positionLabel.Location = new System.Drawing.Point(15, 746);
+            this.positionLabel.Location = new System.Drawing.Point(11, 606);
+            this.positionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.positionLabel.Name = "positionLabel";
-            this.positionLabel.Size = new System.Drawing.Size(44, 16);
+            this.positionLabel.Size = new System.Drawing.Size(35, 13);
             this.positionLabel.TabIndex = 1;
             this.positionLabel.Text = "label1";
             this.positionLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -60,14 +62,14 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(39)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1381, 773);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.ClientSize = new System.Drawing.Size(1036, 628);
             this.Controls.Add(this.fpsLabel);
             this.Controls.Add(this.positionLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Agario-Gra";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
@@ -76,6 +78,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyUp);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseMove);
             this.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.Form2_MW);
             this.ResumeLayout(false);
             this.PerformLayout();

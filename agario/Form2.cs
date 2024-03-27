@@ -24,7 +24,7 @@ namespace agario
         public Form2(StartingInfo startingInfo)
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
+            DoubleBuffered = true;
             game = new Game(this, startingInfo);
             Zoom = 15;
             Camerax = 0;
@@ -72,82 +72,51 @@ namespace agario
                 y += (length * Zoom);
             }
         }
+        void drawGrid2(Graphics g, double length)
+        {
+            SolidBrush brush = new SolidBrush(fpsLabel.BackColor);
+            double x = (Game.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).X) % (length * Zoom);
+            while (x < Size.Width)
+            {
+                double y = (Game.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).Y) % (length * Zoom);
+                while (y < Size.Height)
+                {
+                    g.FillEllipse(brush, (int)x, (int)y, (int)(Zoom/2), (int)(Zoom/2));
+                    y += (length * Zoom);
+                }
+                x += (length * Zoom);
+            }
+        }
         private string pos = "";
-        private double time = 0;
-        private int fps = 0;
-        private long lastTime = 0;
-        private int frames = 0;
-        private double deltaTime = 0;
-        public static double Lerp(double a, double b, double t)
-        {
-            t = Clamp01(t);
-            return a + (b - a) * t;
-        }
 
-        private static double Clamp01(double value)
-        {
-            return (value < 0f) ? 0 : (value > 1) ? 1 : value;
-        }
         private void Form2_Paint(object sender, PaintEventArgs e)
         {
-            Camerax = Lerp(Camerax, Player.MPlayer.Position.x, 0.005*deltaTime);
-            //Camerax = Player.MPlayer.Position.x;//, 0.005*deltaTime);
-            //Cameray = Player.MPlayer.Position.y;//, 0.005*deltaTime);
-            Cameray = Lerp(Cameray, Player.MPlayer.Position.y, 0.005*deltaTime);
-            Zoom = Lerp(Zoom, targetZoom, 0.005f * deltaTime);
-            //Zoom = targetZoom;
-
+            double deltaTime = Game.DeltaTime;
+            Camerax = GameMethods.Lerp(Camerax, Player.MPlayer.Position.x, 0.005*deltaTime);
+            Cameray = GameMethods.Lerp(Cameray, Player.MPlayer.Position.y, 0.005*deltaTime);
+            Zoom = GameMethods.Lerp(Zoom, targetZoom, 0.005f * deltaTime);
             Player player = Player.MPlayer;
 
-            
-
-            GameObject[] gos = GameObject.GameObjects;
-            Array.Sort<GameObject>(gos, new GameObject.SizeComparer());
-            //List<GameObject> gos = GameObject.GameObjects;
-            //gos.Sort(new GameObject.SizeComparer());
-            drawGrid(e.Graphics, 4.0f );
-            foreach (GameObject go in gos)
+            drawGrid2(e.Graphics, 4.0f);
+            foreach (GameObject go in GameObject.GameObjects.OrderBy((GameObject go) => { return go; }, new GameObject.SizeComparer()))
             {
-                if(go==null)
-                    continue; 
+                if (go == null)
+                    continue;
                 Point z = go.GetScreenPosition(Camerax, Cameray, Size, Zoom);
-                double r = 1;
-                if(go.GetType()==typeof(Player))
-                    r = ((Player)go).Size;
+                double r = Zoom;
+                if (go.GetType() == typeof(Player))
+                    r = ((Player)go).Size * Zoom;
                 if (z.X < -r || z.X > Size.Width + r || z.Y < -r || z.Y > Size.Height + r)
                     continue;
                 go.Draw(e.Graphics, Camerax, Cameray, Size, Zoom);
-        
+
             }
-            if(pos!= "Pos: " + player.Position.ToString()){
+            if (pos!= "Pos: " + player.Position.ToString()){
                 pos = "Pos: " + player.Position.ToString();
                 positionLabel.Text = pos;
-                positionLabel.Refresh();
             }
-
-
-            long timeNow = DateTime.Now.Ticks;
-            deltaTime = (timeNow - lastTime) / (double)TimeSpan.TicksPerMillisecond;
-            //if (deltaTime < 3)
-            //{
-            //    Thread.Sleep(3 - (int)deltaTime);
-            //    timeNow = DateTime.Now.Ticks;
-            //    deltaTime = (timeNow - lastTime) / (double)TimeSpan.TicksPerMillisecond;
-            //}
-            lastTime = timeNow;
-            
-            
-            time += deltaTime;
-            frames++;
-            if (time > 1000)
-            {
-                fps = (int)((frames*1000)/time);
-                time = 0;
-                frames = 0;
-                fpsLabel.Text = "Fps: " + fps.ToString() + " Ping: " + NewClient.Ping;
-                
-                fpsLabel.Refresh();
-            }
+  
+            fpsLabel.Text = "Fps: " + Game.FPS.ToString() + " Ping: " + NewClient.Ping;
         }
 
         private void positionLabel_Click(object sender, EventArgs e)
@@ -178,6 +147,12 @@ namespace agario
         private void pingLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form2_MouseMove(object sender, MouseEventArgs e)
+        {
+            Point pos = new Point(e.X, e.Y);
+            Game.SetMouse(pos.ToGamePoint(Size, new Vector2(Camerax, Cameray), Zoom));
         }
     }
 }

@@ -10,13 +10,20 @@ namespace agario
 {
     public struct Vector2
     {
+        public static Vector2 Zero { get { return new Vector2(0, 0); } }
         public double x; 
         public double y;
         public double Magnitude { get { return (double) Math.Sqrt(x*x+y*y); } }
+        public double Angle { get { return Math.Atan2(y, x); } }
         public Vector2(double x, double y)
         {
             this.x = x; 
             this.y = y; 
+        }
+        public Vector2(Vector2 v)
+        {
+            x = v.x;
+            y = v.y;
         }
         public Vector2(string v)
         {
@@ -32,9 +39,23 @@ namespace agario
                 x = 22.0f; y = 0.0f;
             }
         }
+        public Vector2 Rotated(double angle)
+        {
+            double mag = Magnitude;
+            double ang = Angle;
+            return FromAngle(ang + angle, mag);
+        }
+        public static Vector2 FromAngle(double angle, double magnitude=1.0)
+        {
+            return new Vector2(Math.Cos(angle), Math.Sin(angle))*magnitude;
+        }
         public static Vector2 operator -(Vector2 a, Vector2 b)
         {
             return new Vector2(a.x - b.x, a.y - b.y);
+        }
+        public static Vector2 operator -(Vector2 a)
+        {
+            return new Vector2(-a.x, -a.y);
         }
         public static Vector2 operator+(Vector2 a, Vector2 b)
         {
@@ -44,9 +65,21 @@ namespace agario
         {
             return new Vector2(a.x * b, a.y * b);
         }
+        public static Vector2 operator *(double b, Vector2 a)
+        {
+            return a*b;
+        }
+        public static Vector2 operator /(Vector2 a, double b)
+        {
+            return new Vector2(a.x / b, a.y / b);
+        }
         public Point toPoint(double scale=1.0f)
         {
             return new Point((int)Math.Round(this.x*scale), (int)Math.Round(this.y*-scale));
+        }
+        public Vector2 ToUnitVector()
+        {
+            return new Vector2(this) / this.Magnitude;
         }
         public override string ToString()
         {

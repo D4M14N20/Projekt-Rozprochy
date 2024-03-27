@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
@@ -74,6 +75,25 @@ namespace agario
             sf.Dispose();
 
         }
+        private bool ready = true;
+        public void Shoot()
+        {
+            if (!ready)
+                return;
+            Random random = new Random((int)DateTime.Now.Ticks);
+            Vector2 dif = (Game.Mouse - Position).ToUnitVector();
+            dif = dif.Rotated((random.NextDouble()-0.5)*0.3);
+            Bullet bullet = new Bullet(this.Position + new Vector2(dif*(Size+1.5)), this);
+            bullet.Color = Color;
+            bullet.Velocity = dif*70.0;
+            
+            bullet = new Bullet(this.Position + new Vector2(-dif*(Size+1.5)), this);
+            bullet.Color = Color;
+            bullet.Velocity = -dif*70.0;
+            //bullet.Size = 0.5;
+            ready = false;
+            Task.Run(() => { Thread.Sleep(50); ready = true; });
+        }
         public override void Start()
         {
 
@@ -82,12 +102,36 @@ namespace agario
         {
             if (Player.MPlayer == this)
             {
+                double v0 = 12.0f;
+                double vx = Velocity.x;
+                double vy = Velocity.y;
+                if (Game.IsPressed(Keys.W))
+                {
+                    vy = v0;
+                }
+                if (Game.IsPressed(Keys.S))
+                {
+                    vy = -v0;
+                }
+                if (Game.IsPressed(Keys.A))
+                {
+                    vx = -v0;
+                }
+                if (Game.IsPressed(Keys.D))
+                {
+                    vx = v0;
+                }
+                if (Game.IsPressed(Keys.E))
+                {
+                    Shoot();
+                }
+                Velocity = new Vector2(vx, vy);
                 foreach (GameObject go in GameObject.GameObjects)
                 {
                     if (go.GetType() == typeof(ExpPoint))
                     {
                         if ((go.Position - Position).Magnitude < Size) {
-                            Size = (double)Math.Sqrt(Size * Size + 1);
+                            Size = (double)Math.Sqrt(Size * Size + 0.1);
                             go.Destroy();
                             Task.Run(() => { NewClient.Eat(go.Position); });
                         }
@@ -100,7 +144,7 @@ namespace agario
                         {
                             go.Destroy();
                             Task.Run(() => { NewClient.Kill(pl.Name); });
-                            Size = (double)Math.Sqrt(Size * Size + pl.Size + pl.Size);
+                            Size = (double)Math.Sqrt(Size * Size + (pl.Size * pl.Size)/2.0);
                         }
                     }
                 }

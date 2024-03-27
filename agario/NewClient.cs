@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Sockets;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,26 +17,28 @@ namespace agario
         private static StreamReader reader;
         public static bool Connected { get; private set; } = false;
         public static int Ping { get; private set; } = 0;
-        public static Dictionary<string, PlayerState> PlayerStates {  get; private set; } = new Dictionary<string, PlayerState>();
+        public static Dictionary<string, PlayerState> PlayerStates { get; private set; } = new Dictionary<string, PlayerState>();
         public static List<Vector2> ExpPoins { get; private set; } = new List<Vector2>();
+        //public static List<Gam> ExpPoins { get; private set; } = new List<Vector2>();
         private static Queue<Vector2> Eated { get; set; } = new Queue<Vector2>();
         private static Queue<string> Killed { get; set; } = new Queue<string>();
         //[DllImport("kernel32.dll", SetLastError = true)]
         //[return: MarshalAs(UnmanagedType.Bool)]
         //static extern bool AllocConsole();
-        public static Task<bool> Connect(string name, string ip= "127.0.0.1") {
+        public static Task<bool> Connect(string name, string ip = "127.0.0.1")
+        {
             string serverIP = ip;
             int serverPort = 50080;
             client = new TcpClient();
             try
             {
-                client.Connect(serverIP, serverPort);   
+                client.Connect(serverIP, serverPort);
             }
             catch (SocketException ex)
             {
                 //AllocConsole();
                 Console.WriteLine(ex);
-                if(client.Connected)
+                if (client.Connected)
                     client.Close();
                 return Task.FromResult(false);
             }
@@ -54,7 +54,7 @@ namespace agario
             if (msg == "accept")
             {
                 Console.WriteLine("poloczono");
-                ((Form1)Form1.ActiveForm).Konsola=("poloczono");
+                ((Form1)Form1.ActiveForm).Konsola = ("poloczono");
                 Connected = true;
                 return Task.FromResult(true);
             }
@@ -96,6 +96,7 @@ namespace agario
                 }
                 else
                     Set();
+                Thread.Sleep(10);
             }
             client.Close();
             return Task.CompletedTask;
@@ -106,7 +107,8 @@ namespace agario
                 client.Close();
             return Task.CompletedTask;
         }
-        private static void Write(string msg) {
+        private static void Write(string msg)
+        {
             writer.WriteLine(msg);
         }
         private static string Read()
@@ -144,7 +146,7 @@ namespace agario
                 foreach (string s in strs)
                 {
                     string[] ss = s.Split('!');
-                    if(ss.Length == 2)
+                    if (ss.Length == 2)
                     {
                         PlayerState ps = new PlayerState(ss[1]);
                         PlayerStates.Add(ss[0], ps);
@@ -170,7 +172,8 @@ namespace agario
         }
         private static void Eat()
         {
-            lock (Eated) {
+            lock (Eated)
+            {
                 while (Eated.Count > 0)
                 {
                     Write("eat");
