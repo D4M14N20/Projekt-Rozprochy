@@ -55,7 +55,7 @@ namespace agario
         {
             Pen pen = new Pen(fpsLabel.BackColor, 1);
             //pen.Width = Zoom / 15.0f;
-            double x = (Game.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).X)%(length*Zoom);
+            double x = (GameMethods.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).X)%(length*Zoom);
             while (x < Size.Width)
             {
                 Point start = new Point((int)x, 0);
@@ -63,7 +63,7 @@ namespace agario
                 g.DrawLine(pen, start, end);
                 x += (length*Zoom);
             }
-            double y = (Game.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).Y) % (length * Zoom);
+            double y = (GameMethods.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).Y) % (length * Zoom);
             while (y < Size.Height)
             {
                 Point start = new Point(0, (int)y);
@@ -75,10 +75,10 @@ namespace agario
         void drawGrid2(Graphics g, double length)
         {
             SolidBrush brush = new SolidBrush(fpsLabel.BackColor);
-            double x = (Game.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).X) % (length * Zoom);
+            double x = (GameMethods.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).X) % (length * Zoom);
             while (x < Size.Width)
             {
-                double y = (Game.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).Y) % (length * Zoom);
+                double y = (GameMethods.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).Y) % (length * Zoom);
                 while (y < Size.Height)
                 {
                     g.FillEllipse(brush, (int)x, (int)y, (int)(Zoom/2), (int)(Zoom/2));

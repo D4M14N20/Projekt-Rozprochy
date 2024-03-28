@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -12,15 +13,20 @@ namespace agario
 {
     internal class Player : GameObject
     {
-        public Color Color { get { return circleBrush.Color; } set { lock(this) circleBrush.Color = value; borderPen.Color = Color.FromArgb(value.R / 2, value.G / 2, value.B / 2); } }
+        public Color Color { get { return circleBrush.Color; } set { lock(this) circleBrush.Color = value; borderPen.Color = Color.FromArgb(150, value.R / 2, value.G / 2, value.B / 2); NewClient.AddEvent(new ServerEvent(PlayerName, GameEvents.ColorSet, value.ToArgb())); } }
         private static Player player;
         public static Player MPlayer { get { return player; } set { player = value; } }
-        public double Size { get; set; }
+        private double size;
+        public double Size { get { return size; } set { 
+            size = value; NewClient.AddEvent(new ServerEvent(PlayerName, GameEvents.SizeSet, value)); } 
+        }
         public double R { get { return (double)(Math.Sqrt(Size/Math.PI)); } }
         private bool phantom = false;
         public bool Phantom { get { return phantom; } set { phantom = value; if (value) Color = Color.FromArgb(50, Color); } }
+        public string PlayerName { get; set; }
         public Player(string name) {
-            this.Name = name;
+            ObjectName = name+"->GameObject";
+            PlayerName = name;
             if(player == null)
                 player = this;
             Size = 3.14f;
@@ -29,13 +35,15 @@ namespace agario
         }
         public Player(string name, PlayerState ps)
         {
-            this.Name = name;
+            ObjectName = name+"->GameObject";
+            PlayerName = name;
             if (player == null)
                 player = this;
             Position = new Vector2(ps.posX, ps.posY);
             Velocity = new Vector2(ps.vX, ps.vY);
-            Size = ps.size;
-            Color = ps.color;
+            Size = 3.14f;
+            //Size = ps.size;
+            //Color = ps.color;
             Drag = 1.0f;
             Initialize();
         }
@@ -49,7 +57,7 @@ namespace agario
             int y = GetScreenPosition(camerax, cameray, size, scale).Y;
             int r = (int)(Size * scale);
 
-            borderPen.Width = (float)(scale/4.0);
+            borderPen.Width = (float)((scale*Size)/4.0);
             // Rysowanie koła
             lock (this)
             {
@@ -66,9 +74,9 @@ namespace agario
             Font font = new Font("Arial", (float)Math.Max(scale*R, 1));
             Font font2 = new Font("Arial", (float)Math.Max(scale*R, 1));
             if(Color.GetBrightness()<0.5f)
-                g.DrawString(Name, font2, FontBrush2, new PointF(x, y), sf);
+                g.DrawString(PlayerName, font2, FontBrush2, new PointF(x, y), sf);
             else
-                g.DrawString(Name, font, FontBrush, new PointF(x, y), sf);
+                g.DrawString(PlayerName, font, FontBrush, new PointF(x, y), sf);
 
             font.Dispose();
             font2.Dispose();
@@ -83,13 +91,27 @@ namespace agario
             Random random = new Random((int)DateTime.Now.Ticks);
             Vector2 dif = (Game.Mouse - Position).ToUnitVector();
             dif = dif.Rotated((random.NextDouble()-0.5)*0.3);
-            Bullet bullet = new Bullet(this.Position + new Vector2(dif*(Size+1.5)), this);
-            bullet.Color = Color;
-            bullet.Velocity = dif*70.0;
-            
-            bullet = new Bullet(this.Position + new Vector2(-dif*(Size+1.5)), this);
-            bullet.Color = Color;
-            bullet.Velocity = -dif*70.0;
+
+            int sides = 3;
+            Bullet bullet;
+            for(int i = 0; i < sides; i++)
+            {
+                dif.Rotate(Math.PI / sides * 2);
+                bullet = new Bullet(this.Position + new Vector2(dif*(Size+1.5)), this);
+                bullet.Velocity = dif*70.0;
+                NewClient.AddEvent(new ServerEvent(PlayerName, GameEvents.BulletSpawn, bullet.Position, bullet.Velocity, bullet.Size));
+            }
+            dif.Rotate(Math.PI / sides);
+            for (int i = 0; i < sides; i++)
+            {
+                dif.Rotate(Math.PI / sides * 2);
+                bullet = new Bullet(this.Position + new Vector2(dif * (Size + 1.5)), this);
+                bullet.Velocity = dif * 70.0;
+                bullet.Size = 0.8;
+                NewClient.AddEvent(new ServerEvent(PlayerName, GameEvents.BulletSpawn, bullet.Position, bullet.Velocity, bullet.Size));
+            }
+
+
             //bullet.Size = 0.5;
             ready = false;
             Task.Run(() => { Thread.Sleep(50); ready = true; });
@@ -100,7 +122,7 @@ namespace agario
         }
         public override void Update(double time)
         {
-            if (Player.MPlayer == this)
+            if (MPlayer == this)
             {
                 double v0 = 12.0f;
                 double vx = Velocity.x;
@@ -126,14 +148,15 @@ namespace agario
                     Shoot();
                 }
                 Velocity = new Vector2(vx, vy);
-                foreach (GameObject go in GameObject.GameObjects)
+                foreach (GameObject go in GameObjects)
                 {
                     if (go.GetType() == typeof(ExpPoint))
                     {
                         if ((go.Position - Position).Magnitude < Size) {
                             Size = (double)Math.Sqrt(Size * Size + 0.1);
                             go.Destroy();
-                            Task.Run(() => { NewClient.Eat(go.Position); });
+                            //Task.Run(() => { NewClient.Eat(go.Position); });
+                            NewClient.Eat(go.Position);
                         }
                         
                     }
@@ -143,21 +166,14 @@ namespace agario
                         if (!pl.Phantom && (go.Position - Position).Magnitude < Size && Size > pl.Size)//*1.2f)
                         {
                             go.Destroy();
-                            Task.Run(() => { NewClient.Kill(pl.Name); });
+                            //Task.Run(() => { NewClient.Kill(pl.PlayerName); });
+                            NewClient.Kill(pl.PlayerName); 
                             Size = (double)Math.Sqrt(Size * Size + (pl.Size * pl.Size)/2.0);
                         }
                     }
                 }
                
             }
-        }
-        public void Set(PlayerState ps)
-        {
-            Position = new Vector2(ps.posX, ps.posY);
-            Velocity = new Vector2(ps.vX, ps.vY);
-            Size = ps.size;
-            Color = ps.color;
-        }
-        
+        }        
     }
 }

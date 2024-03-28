@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using Newtonsoft.Json;
 
 namespace agario
 {
@@ -13,7 +14,9 @@ namespace agario
         public static Vector2 Zero { get { return new Vector2(0, 0); } }
         public double x; 
         public double y;
+        [JsonIgnore]
         public double Magnitude { get { return (double) Math.Sqrt(x*x+y*y); } }
+        [JsonIgnore]
         public double Angle { get { return Math.Atan2(y, x); } }
         public Vector2(double x, double y)
         {
@@ -39,11 +42,15 @@ namespace agario
                 x = 22.0f; y = 0.0f;
             }
         }
+        public void Rotate(double angle)
+        {
+            this = FromAngle(Angle + angle, Magnitude);
+        }
         public Vector2 Rotated(double angle)
         {
-            double mag = Magnitude;
-            double ang = Angle;
-            return FromAngle(ang + angle, mag);
+            Vector2 ret = new Vector2(this);
+            ret.Rotate(angle);
+            return ret;
         }
         public static Vector2 FromAngle(double angle, double magnitude=1.0)
         {

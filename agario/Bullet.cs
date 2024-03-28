@@ -21,7 +21,10 @@ namespace agario
         {
             Owner = owner;
             Layer = 2;
-            Color = Game.RandomColor(random);
+            if (owner != null)
+                Color = owner.Color;
+            else
+                Color = GameMethods.RandomColor(random);
             Drag = 0.5;
             this.Position = position;
             Initialize();

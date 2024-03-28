@@ -39,7 +39,7 @@ namespace agario
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            colorDialog1.Color = Game.RandomColor(new Random((int)DateTime.Now.Ticks));
+            colorDialog1.Color = GameMethods.RandomColor(new Random((int)DateTime.Now.Ticks));
             panel1.BackColor = colorDialog1.Color;
         }
 

@@ -13,13 +13,13 @@ namespace agario
         private static Random random = new Random();
         public ExpPoint()
         {
-            Color = Game.RandomColor(random);
+            Color = GameMethods.RandomColor(random);
             Initialize();
         }
         public ExpPoint(Vector2 position)
         {
             Random random = new Random((int)(position.x*position.y));
-            Color = Game.RandomColor(random);
+            Color = GameMethods.RandomColor(random);
             this.Position = position;
             Initialize();
         }

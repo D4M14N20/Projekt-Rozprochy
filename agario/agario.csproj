@@ -73,6 +73,7 @@
     <Compile Include="PlayerState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerEvent.cs" />
     <Compile Include="StartingInfo.cs" />
     <Compile Include="Vector2.cs" />
     <EmbeddedResource Include="Form1.resx">

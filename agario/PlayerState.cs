@@ -12,20 +12,20 @@ namespace agario
     internal struct PlayerState
     {
         public double posX, posY, vX, vY;
-        public double size;
-        public bool isDead;
         public Color color;
-        public PlayerState(double posX, double posY, double vX, double vY, double size, bool isDead, Color color)
+        //List<string> events;
+        //List<List<object>> eventsArgs=new List<List<object>>();
+        public PlayerState(double posX, double posY, double vX, double vY, Color color)
         {
+            //events = new List<string>();
+            //eventsArgs = new List<List<object>>();
             this.posX = posX;
             this.posY = posY;
             this.vX = vX;
             this.vY = vY;
-            this.size = size;
-            this.isDead = isDead;
-            this.color = color;
+            this.color = color; 
         }
-        public PlayerState(String Json)
+        public PlayerState(string Json)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace agario
                 this = new PlayerState();
             }
         }
-        public String ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this);
         }
@@ -46,7 +46,13 @@ namespace agario
         }
         public static PlayerState GetPlayerState(Player player)
         {
-            return new PlayerState(player.Position.x, player.Position.y, player.Velocity.x, player.Velocity.y, player.Size, false, player.Color);
+            return new PlayerState(player.Position.x, player.Position.y, player.Velocity.x, player.Velocity.y, player.Color);
+        }
+        public static void Set(this Player player, PlayerState ps)
+        {
+            player.Position = new Vector2(ps.posX, ps.posY);
+            player.Velocity = new Vector2(ps.vX, ps.vY);
+            player.Color = ps.color;
         }
     }
 }

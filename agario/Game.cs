@@ -93,7 +93,7 @@ namespace agario
         {
             if (NewClient.Connected)
             {
-                lock (NewClient.NewClientLockObject)
+                lock (NewClient.PlayerStates)
                 {
                     var playersToSpawn = NewClient.PlayerStates.Keys.Except(otherPlayers.Keys);
                     foreach (var kv in playersToSpawn)
@@ -121,6 +121,32 @@ namespace agario
                         expPoints.Remove(point);
                     }
                 }
+                lock (NewClient.ReceivedEvents)
+                {
+                    while (NewClient.ReceivedEvents.Count > 0)
+                    {
+                        ServerEvent evnt = NewClient.ReceivedEvents.Dequeue();
+                        if (otherPlayers.ContainsKey(evnt.sender))
+                        {
+
+                            if (evnt.gameEvent == GameEvents.ColorSet)
+                            {
+                                //otherPlayers[evnt.sender].PlayerName = evnt.eventsArgs[0].GetType().Name;
+                                otherPlayers[evnt.sender].Color = Color.FromArgb((int)(long)evnt.eventsArgs[0]);
+                            }
+                            else if (evnt.gameEvent == GameEvents.SizeSet)
+                            {
+                                otherPlayers[evnt.sender].Size = (double)evnt.eventsArgs[0];
+                            }
+                            else if (evnt.gameEvent == GameEvents.BulletSpawn)
+                            {
+                                Bullet bullet = new Bullet((Vector2)evnt.eventsArgs[0], otherPlayers[evnt.sender]);
+                                bullet.Velocity = (Vector2)evnt.eventsArgs[1];
+                                bullet.Size = (double)evnt.eventsArgs[2];
+                            }
+                        }
+                    }
+                }
             }
             return Task.CompletedTask;
         }
@@ -128,7 +154,50 @@ namespace agario
         {
             return keysMap.ContainsKey(key) && keysMap[key];
         }
-        public static Point GetScreenPosition(double camerax, double cameray, Size size, double posx, double posy,double scale = 1.0f)
+
+        //private Bitmap drawingBitmap;
+        //private double Camerax { get; set; }
+        //private double Cameray { get; set; }
+        //private void Render()
+        //{
+        //    drawingBitmap = new Bitmap(form.Size.Width, form.Size.Height);
+        //    using (Graphics g = Graphics.FromImage(drawingBitmap))
+        //    {
+        //        double scale = form.Zoom;
+        //        Size size = form.Size;
+        //        double deltaTime = Game.DeltaTime;
+        //        Camerax = GameMethods.Lerp(Camerax, Player.MPlayer.Position.x, 0.005 * deltaTime);
+        //        Cameray = GameMethods.Lerp(Cameray, Player.MPlayer.Position.y, 0.005 * deltaTime);
+        //        Player player = Player.MPlayer;
+
+        //        //drawGrid2(e.Graphics, 4.0f);
+        //        foreach (GameObject go in GameObject.GameObjects.OrderBy((GameObject go) => { return go; }, new GameObject.SizeComparer()))
+        //        {
+        //            if (go == null)
+        //                continue;
+        //            Point z = go.GetScreenPosition(Camerax, Cameray, size, scale);
+        //            double r = scale;
+        //            if (go.GetType() == typeof(Player))
+        //                r = ((Player)go).Size * scale;
+        //            if (z.X < -r || z.X > size.Width + r || z.Y < -r || z.Y > size.Height + r)
+        //                continue;
+        //            go.Draw(g, Camerax, Cameray, size, scale);
+
+        //        }
+        //    }
+
+        //    // Aktualizacja PictureBox z wątku głównego
+        //    //pictureBox.BeginInvoke(new Action(() =>
+        //    //{
+        //        form.BackgroundImage = drawingBitmap;
+        //    //}));
+        //    //Thread.Sleep(100);
+
+        //}
+    }
+    public static class GameMethods
+    {
+        public static Point GetScreenPosition(double camerax, double cameray, Size size, double posx, double posy, double scale = 1.0f)
         {
             double x = (size.Width / 2.0 - scale * (camerax - posx));
             double y = (size.Height / 2.0 + scale * (cameray - posy));
@@ -138,49 +207,6 @@ namespace agario
         {
             return Color.FromArgb(random.Next(255), random.Next(255), random.Next(255));
         }
-
-        private Bitmap drawingBitmap;
-        private double Camerax { get; set; }
-        private double Cameray { get; set; }
-        private void Render()
-        {
-            drawingBitmap = new Bitmap(form.Size.Width, form.Size.Height);
-            using (Graphics g = Graphics.FromImage(drawingBitmap))
-            {
-                double scale = form.Zoom;
-                Size size = form.Size;
-                double deltaTime = Game.DeltaTime;
-                Camerax = GameMethods.Lerp(Camerax, Player.MPlayer.Position.x, 0.005 * deltaTime);
-                Cameray = GameMethods.Lerp(Cameray, Player.MPlayer.Position.y, 0.005 * deltaTime);
-                Player player = Player.MPlayer;
-
-                //drawGrid2(e.Graphics, 4.0f);
-                foreach (GameObject go in GameObject.GameObjects.OrderBy((GameObject go) => { return go; }, new GameObject.SizeComparer()))
-                {
-                    if (go == null)
-                        continue;
-                    Point z = go.GetScreenPosition(Camerax, Cameray, size, scale);
-                    double r = scale;
-                    if (go.GetType() == typeof(Player))
-                        r = ((Player)go).Size * scale;
-                    if (z.X < -r || z.X > size.Width + r || z.Y < -r || z.Y > size.Height + r)
-                        continue;
-                    go.Draw(g, Camerax, Cameray, size, scale);
-
-                }
-            }
-
-            // Aktualizacja PictureBox z wątku głównego
-            //pictureBox.BeginInvoke(new Action(() =>
-            //{
-                form.BackgroundImage = drawingBitmap;
-            //}));
-            //Thread.Sleep(100);
-
-        }
-    }
-    public static class GameMethods
-    {
         public static Vector2 ToGamePoint(this Point point, Size screenSize, Vector2 cameraPosition, double scale)
         {
             return new Vector2(cameraPosition.x + (point.X-screenSize.Width/2.0)/scale, cameraPosition.y+(-point.Y + screenSize.Height / 2.0) / scale);

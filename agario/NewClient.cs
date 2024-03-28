@@ -17,11 +17,18 @@ namespace agario
         private static StreamReader reader;
         public static bool Connected { get; private set; } = false;
         public static int Ping { get; private set; } = 0;
+
+        //struktury do ciaglej sychronizacji
         public static Dictionary<string, PlayerState> PlayerStates { get; private set; } = new Dictionary<string, PlayerState>();
         public static List<Vector2> ExpPoins { get; private set; } = new List<Vector2>();
-        //public static List<Gam> ExpPoins { get; private set; } = new List<Vector2>();
-        private static Queue<Vector2> Eated { get; set; } = new Queue<Vector2>();
-        private static Queue<string> Killed { get; set; } = new Queue<string>();
+        public static Queue<ServerEvent> ReceivedEvents { get; private set; } = new Queue<ServerEvent>();
+
+
+
+        ///kolejki do zdarzen serwerowych;
+        private static Queue<Vector2> eated = new Queue<Vector2>();
+        private static Queue<string> killed = new Queue<string>();
+        private static Queue<ServerEvent> eventsToSend = new Queue<ServerEvent>();
         //[DllImport("kernel32.dll", SetLastError = true)]
         //[return: MarshalAs(UnmanagedType.Bool)]
         //static extern bool AllocConsole();
@@ -66,37 +73,30 @@ namespace agario
                 return Task.FromResult(false);
             }
         }
-        private static Task StartSync()
-        {
-            if (client.Connected)
-                Take();
-            return Task.CompletedTask;
-        }
         public static Task Sync()
         {
-
-            StartSync();
             Task task = null;
             SetStart();
             while (client.Connected)
             {
                 Ping = GetPing();
                 Get();
+                GetEvents();
+                Eat();
+                Set();
+                Kill();
+                AddEvent();
                 if (task == null || task.IsCompleted)
                 {
                     Take();
                     task = Task.Delay(100);
                 }
-                Eat();
-                Kill();
                 if (IsKilled())
                 {
                     client.Close();
                     Application.Exit();
                 }
-                else
-                    Set();
-                Thread.Sleep(10);
+                Thread.Sleep(1);
             }
             client.Close();
             return Task.CompletedTask;
@@ -118,6 +118,9 @@ namespace agario
 
 
 
+
+
+
         private static void Set()
         {
             Write("set");
@@ -134,13 +137,12 @@ namespace agario
             string msg = PlayerState.GetPlayerState(Player.MPlayer).ToJson();
             Write(msg);
         }
-        static public readonly object NewClientLockObject = new object();
         private static void Get()
         {
             Write("get");
             string msg = Read();
             string[] strs = msg.Split(';');
-            lock (NewClientLockObject)
+            lock (PlayerStates)
             {
                 PlayerStates.Clear();
                 foreach (string s in strs)
@@ -172,28 +174,25 @@ namespace agario
         }
         private static void Eat()
         {
-            lock (Eated)
+            lock (eated)
             {
-                while (Eated.Count > 0)
+                while (eated.Count > 0)
                 {
                     Write("eat");
-                    string front = Eated.Dequeue().ToString2();
+                    string front = eated.Dequeue().ToString2();
                     Write(front);
                 }
             }
         }
         private static void Kill()
         {
-            lock (Killed)
+            lock (killed)
             {
-                while (Killed.Count > 0)
+                while (killed.Count > 0)
                 {
                     Write("kill");
-                    lock (Killed)
-                    {
-                        string front = Killed.Dequeue();
-                        Write(front);
-                    }
+                    string front = killed.Dequeue();
+                    Write(front);
                 }
             }
         }
@@ -216,20 +215,71 @@ namespace agario
             ping = (int)((endTime - startTime) / (double)TimeSpan.TicksPerMillisecond);
             return ping;
         }
-
-
-
-        public static Task Eat(Vector2 position)
-        {
-            lock (Eated)
-                Eated.Enqueue(position);
-            return Task.CompletedTask;
+        private static void AddEvent()
+        {            
+            while (eventsToSend.Count > 0)
+            {
+                Write("AddEvent");
+                lock (eventsToSend)
+                {
+                    string front = eventsToSend.Dequeue().ToJson();
+                    Write(front);
+                }
+            }
         }
-        public static Task Kill(string name)
+        private static void GetEvents()
         {
-            lock (Killed)
-                Killed.Enqueue(name);
-            return Task.CompletedTask;
+            Write("GetEvents");
+            string ewent=Read();
+            while (ewent!="end")
+            {
+                lock (ReceivedEvents)
+                    ReceivedEvents.Enqueue(new ServerEvent(ewent));
+                ewent = Read();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public static void Eat(Vector2 position)
+        {
+            Task.Run(() =>
+            {
+                lock (eated)
+                    eated.Enqueue(position);
+            });
+            //return Task.CompletedTask;
+        }
+        public static void Kill(string name)
+        {
+            Task.Run(() =>
+            {
+                lock (killed)
+                    killed.Enqueue(name);
+            });
+            //return Task.CompletedTask;
+        }
+        public static void AddEvent(ServerEvent ewent)
+        {
+            if (ewent.sender != Player.MPlayer.PlayerName)
+                return;
+            Task.Run(() =>
+            {
+                lock (eventsToSend)
+                    eventsToSend.Enqueue(ewent);
+            });
+            //return Task.CompletedTask;
         }
     }
 }

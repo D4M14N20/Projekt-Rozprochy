@@ -11,7 +11,7 @@ namespace agario
     {
         public int Id {  get; set; }
         public bool IsSyncing { get; set; } = true;
-        public string Name { get; set; }
+        public string ObjectName { get; set; }
         public Vector2 Position { get; set; }
         public Vector2 Velocity { get; set; }
         public double Drag {  get; set; }
@@ -21,7 +21,7 @@ namespace agario
         static int idc = 1;
         public GameObject(string name="gameObject") {
             this.Id = idc++;
-            this.Name = name;
+            this.ObjectName = name;
             this.Position = new Vector2(0, 0);
             this.Velocity = new Vector2(0, 0);
             this.Drag = 0;
