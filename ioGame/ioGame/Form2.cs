@@ -20,16 +20,14 @@ namespace ioGame
         private Game game;
         private double targetZoom=15;
         public double Zoom { get; private set; }
-        private double Camerax { get; set; }
-        private double Cameray { get; set; }
+        private double Camerax { get; set; } = 0;
+        private double Cameray { get; set; } = 0;
         public Form2(StartingInfo startingInfo)
         {
             InitializeComponent();
             DoubleBuffered = true;
             game = new Game(this, startingInfo);
             Zoom = 15;
-            Camerax = 0;
-            Cameray = 0;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -78,7 +76,7 @@ namespace ioGame
                 double y = (GameMethods.GetScreenPosition(Camerax, Cameray, Size, 0, 0, Zoom).y) % (length * Zoom);
                 while (y < Size.Height)
                 {
-                    g.FillEllipse(brush, (int)x, (int)y, (int)(Zoom/2), (int)(Zoom/2));
+                    g.FillEllipse(brush, (int)x, (int)y, (int)(Zoom/4), (int)(Zoom/4));
                     y += (length * Zoom);
                 }
                 x += (length * Zoom);
@@ -90,28 +88,25 @@ namespace ioGame
         private void Form2_Paint(object sender, PaintEventArgs e)
         {
             double deltaTime = Game.DeltaTime;
-            //Vector2 camera = new Vector2(Camerax, Cameray);
-            //Vector2 deltaC = Player.MPlayer.Position - camera;
-            //camera += deltaC * deltaTime/100024.0;
+            Graphics g = e.Graphics;
 
-            Camerax = GameMethods.Lerp(Camerax, Player.MPlayer.Position.x, 0.005f * deltaTime);
-            Cameray = GameMethods.Lerp(Cameray, Player.MPlayer.Position.y, 0.005f * deltaTime);
-            //Point w = GameMethods.GetScreenPosition(Camerax, Cameray, Size, Camerax, Cameray, Zoom);
-            //Vector2 wd = GameMethods.ToGamePoint(w, Size, new Vector2(Camerax, Cameray), Zoom);
-            //Camerax = wd.x;
-            //Cameray = wd.y;
-            //Camerax = camera.x;
-            //Cameray = camera.y;
+            Vector2 directon = (Player.MPlayer.Position - new Vector2(Camerax, Cameray));
+            if (directon.Magnitude > deltaTime * 0.005 * directon.Magnitude)
+            {
+                double mg = directon.Magnitude;
+                directon = directon.ToUnitVector();
+                Camerax += directon.x * deltaTime* 0.005 * mg;
+                Cameray += directon.y * deltaTime* 0.005 * mg;
+            }
+
             Game.SetCamera(new Vector2 (Camerax, Cameray));
             Zoom = GameMethods.Lerp(Zoom, targetZoom, 0.005f * deltaTime);
             Player player = Player.MPlayer;
-            Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
             g.TextContrast = 0;
 
-            drawGrid2(g, 4.0f);
+            drawGrid2(g, 3.14f);
             foreach (GameObject go in GameObject.GameObjects.OrderBy((GameObject go) => { return go; }, new GameObject.SizeComparer()))
             {
                 if (go == null)

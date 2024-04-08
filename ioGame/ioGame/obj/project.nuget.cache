@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mqTnioF/qAUjMrYUhgDj7WgyP7UgQxGDN63y3/NV7Lg6TYLxCBdbSgBhtS3r7dt9w5Ap5b3vX7M/HveZI3vbAA==",
+  "dgSpecHash": "VPdT2xol7AdTZn/s1YSasbw8J8ndi27CJH3MGbsNu1jyCBQs0PnnuDE883No8EpIx+bSV1PLwphnw75MS2OxJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\ioGame\\ioGame\\ioGame.csproj",
+  "projectFilePath": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\ioGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\damia\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

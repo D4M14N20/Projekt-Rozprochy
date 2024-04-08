@@ -12,7 +12,7 @@ namespace ioGame
 {
     internal class Player : GameObject
     {
-        public Color Color { get { return circleBrush.Color; } set { lock(this) circleBrush.Color = value; borderPen.Color = Color.FromArgb(150, value.R / 2, value.G / 2, value.B / 2);} }
+        public Color Color { get { return circleBrush.Color; } set { lock(this) circleBrush.Color = value; lock (this) borderPen.Color = Color.FromArgb(150, value.R / 2, value.G / 2, value.B / 2);} }
         private static Player player;
         public static Player MPlayer { get { return player; } set { player = value; } }
         private double size;
@@ -66,7 +66,7 @@ namespace ioGame
                 //r = r - (int)borderPen.Width/2;
                 borderPen.Width = (float)((scale) / 4.0);
                 borderPen.Color = Color.FromArgb(255, borderPen.Color);
-                g.DrawEllipse(borderPen, x - r, y - r, 2 * r, 2 * r);
+                g.DrawEllipse(borderPen, (x - r), (y - r), 2 * r, 2 * r);
             }
 
 
@@ -75,16 +75,16 @@ namespace ioGame
             sf.LineAlignment = StringAlignment.Center;
 
             Font font = new Font(FontFamily.GenericSansSerif, (float)Math.Max(scale*R*1.3, 1), FontStyle.Regular);
-            if (Color.GetBrightness() > 0.5f)
-            {
-                FontBrush.Color = Color.FromArgb(0x1e, 0x1e, 0x1e);
-                FontBrush2.Color = Color.AntiqueWhite;
-            }
-            else
-            {
+            //if (Color.GetBrightness() > 0.5f)
+            //{
                 FontBrush2.Color = Color.FromArgb(0x1e, 0x1e, 0x1e);
                 FontBrush.Color = Color.AntiqueWhite;
-            }
+            //}
+            //else
+            //{
+            //    FontBrush2.Color = Color.FromArgb(0x1e, 0x1e, 0x1e);
+            //    FontBrush.Color = Color.AntiqueWhite;
+            //}
             
             float d = (float)scale*0.035f;
             g.DrawString(PlayerName, font, FontBrush2, new PointF(x + d, y), sf);
@@ -120,7 +120,7 @@ namespace ioGame
             {
                 dif.Rotate(Math.PI / sides * 2);
                 bullet = new Bullet(Position +new Vector2(dif*(Size+1.5)), this);
-                bullet.Velocity = dif*40.0;
+                bullet.Velocity = dif*30.0;
                 NewClient.AddEvent(new ServerEvent(PlayerName, GameEvents.BulletSpawn, bullet.Position, bullet.Velocity, bullet.Size, bullet.Id));
             }
             //dif.Rotate(Math.PI / sides);
@@ -136,7 +136,7 @@ namespace ioGame
 
             //bullet.Size = 0.5;
             ready = false;
-            Task.Run(() => { Thread.Sleep(100); ready = true; });
+            Task.Run(() => { Thread.Sleep(50); ready = true; });
         }
         public override void Start()
         {
@@ -170,6 +170,8 @@ namespace ioGame
                     Shoot();
                 }
                 Velocity = new Vector2(vx, vy);
+                if (Velocity.x == v0 && Velocity.y == v0)
+                    Velocity = Velocity.ToUnitVector() * v0;
                 foreach (GameObject go in GameObjects)
                 {
                     if (go.GetType() == typeof(ExpPoint))

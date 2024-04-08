@@ -14,7 +14,7 @@ namespace ioGame
         private static Random random = new Random();
         private double distance = 0;
         public double Range { get; set; } = 48.0;
-        public double Size { get; set; } = 1.5;
+        public double Size { get; set; } = 1.0;
         public Player? Owner { get; private set; } = null;
         private bool hitted=false;
         public Bullet(Vector2 position, Player? owner=null)
@@ -26,7 +26,7 @@ namespace ioGame
             else
                 Color = GameMethods.RandomColor(random);
             Drag = 0.0;
-            this.Position = position;
+            Position = position;
             Initialize();
         }
         private SolidBrush circleBrush = new SolidBrush(Color.White);
@@ -57,13 +57,20 @@ namespace ioGame
                 Hit();
         }
         double timeD = 0;
-        public void Hit()
+        public void Hit(Color? clr = null)
         {
             if(hitted) return;
             hitted = true;
             Drag = 10;
+            if (clr.HasValue)
+                Color = clr.Value;
             if (Owner == Player.MPlayer)
-                NewClient.AddEvent(new ServerEvent(Player.MPlayer.PlayerName, GameEvents.BulletHitted, Id));
+            {
+                if (clr.HasValue) 
+                   NewClient.AddEvent(new ServerEvent(Player.MPlayer.PlayerName, GameEvents.BulletHitted, Id, clr.Value.ToArgb()));
+                else
+                   NewClient.AddEvent(new ServerEvent(Player.MPlayer.PlayerName, GameEvents.BulletHitted, Id));
+            }
         }
         public override void Update(double time)
         {
@@ -78,7 +85,7 @@ namespace ioGame
                 {
                     if (go.GetType() == typeof(ExpPoint))
                     {
-                        if ((go.Position - Position).Magnitude < 2.5)
+                        if ((go.Position - Position).Magnitude < 1.0+Size)
                         {
                             Player.MPlayer.Size = (double)Math.Sqrt(Player.MPlayer.Size* Player.MPlayer.Size + 0.1);
                             go.Destroy();
@@ -90,9 +97,10 @@ namespace ioGame
                     }
                     else if ((go.GetType() == typeof(Bullet) && ((Bullet)go).Owner != Player.MPlayer))
                     {
-                        if ((go.Position - Position).Magnitude < Size&&!((Bullet)go).hitted&&!hitted)
+                        if ((go.Position - Position).Magnitude < Size+ ((Bullet)go).Size&& !((Bullet)go).hitted&&!hitted)
                         {
-                            Hit();              
+                            Hit(Color.MixWith(((Bullet)go).Color));
+                            ((Bullet)go).Hit();
                         }
                     }
                    /* else if (go.GetType() == typeof(Player) && this != go)

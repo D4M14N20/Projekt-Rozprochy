@@ -51,7 +51,7 @@
             positionLabel.AutoSize = true;
             positionLabel.BackColor = Color.FromArgb(75, 80, 89);
             positionLabel.ForeColor = SystemColors.ActiveCaption;
-            positionLabel.Location = new Point(13, 699);
+            positionLabel.Location = new Point(13, 835);
             positionLabel.Margin = new Padding(2, 0, 2, 0);
             positionLabel.Name = "positionLabel";
             positionLabel.Size = new Size(38, 15);
@@ -65,7 +65,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 31, 34);
-            ClientSize = new Size(1209, 725);
+            ClientSize = new Size(1584, 861);
             Controls.Add(fpsLabel);
             Controls.Add(positionLabel);
             Icon = (Icon)resources.GetObject("$this.Icon");

@@ -156,8 +156,14 @@ namespace ioGame
                                     int mid = otherPlayers[evnt.sender].idMap[id];
                                     otherPlayers[evnt.sender].idMap.Remove(id);
                                     GameObject? go = GameObject.GetGOById(mid);
-                                    if (go!=null)
-                                        ((Bullet)(go)).Hit();
+                                    if (go != null)
+                                    {
+                                        if(evnt.eventsArgs.Length==2)
+                                            ((Bullet)(go)).Hit(Color.FromArgb((int)(long)(evnt.eventsArgs[1])));
+                                        else
+                                            ((Bullet)(go)).Hit();
+
+                                    }
                                 }
                             }
                         }
@@ -236,6 +242,10 @@ namespace ioGame
         private static double Clamp01(double value)
         {
             return (value < 0f) ? 0 : (value > 1) ? 1 : value;
+        }
+        public static Color MixWith(this Color org, Color color)
+        {
+            return Color.FromArgb((org.R+color.R)/2, (org.G+color.G)/2, (org.B+color.B)/2);
         }
     }
 }
