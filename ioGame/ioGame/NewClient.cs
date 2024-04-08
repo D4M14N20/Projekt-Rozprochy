@@ -89,7 +89,7 @@ namespace ioGame
                 if (task == null || task.IsCompleted)
                 {
                     Take();
-                    task = Task.Delay(100);
+                    task = Task.Delay(1000);
                 }
                 if (IsKilled())
                 {

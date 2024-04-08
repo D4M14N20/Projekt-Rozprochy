@@ -3,63 +3,63 @@
   "WorkspaceRootPath": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\newclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\newclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\exppoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\exppoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\exppoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\newclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\newclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\serverevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\serverevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\serverevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\iogame.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\iogame.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\iogame.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|c:\\users\\damia\\onedrive\\pulpit\\projektrozproszone\\agario\\iogame\\iogame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\iogame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{366B0A36-C35C-4D10-9927-A1CC6FC8C718}|ioGame\\ioGame.csproj|solutionrelative:iogame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,56 +78,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ExpPoint.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\ExpPoint.cs",
-              "RelativeDocumentMoniker": "ioGame\\ExpPoint.cs",
-              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\ExpPoint.cs",
-              "RelativeToolTip": "ioGame\\ExpPoint.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAArwB4AAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T12:45:27.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "NewClient.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\NewClient.cs",
               "RelativeDocumentMoniker": "ioGame\\NewClient.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\NewClient.cs",
               "RelativeToolTip": "ioGame\\NewClient.cs",
-              "ViewState": "AQIAAOMAAAAAAAAAAAAowPYAAAAAAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAwwFQAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T11:45:37.126Z"
+              "WhenOpened": "2024-03-28T11:45:37.126Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Form2.cs",
               "RelativeDocumentMoniker": "ioGame\\Form2.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Form2.cs",
               "RelativeToolTip": "ioGame\\Form2.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAqwGIAAAA+AAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAGIAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T11:44:34.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Form2.cs [Projekt]",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Form2.cs",
               "RelativeDocumentMoniker": "ioGame\\Form2.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Form2.cs [Projekt]",
               "RelativeToolTip": "ioGame\\Form2.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T11:44:33.667Z",
-              "EditorCaption": " [Projekt]"
+              "WhenOpened": "2024-03-28T11:44:33.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Bullet.cs",
               "RelativeDocumentMoniker": "ioGame\\Bullet.cs",
@@ -135,20 +123,20 @@
               "RelativeToolTip": "ioGame\\Bullet.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAuwGYAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T11:28:25.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-28T11:28:25.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Player.cs",
               "RelativeDocumentMoniker": "ioGame\\Player.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Player.cs",
               "RelativeToolTip": "ioGame\\Player.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAA5wCAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T11:20:20.858Z"
+              "WhenOpened": "2024-03-28T11:20:20.858Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -170,7 +158,7 @@
               "RelativeDocumentMoniker": "ioGame\\Game.cs",
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Game.cs",
               "RelativeToolTip": "ioGame\\Game.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAIA9wCwAAAAbAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAApwDkAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T11:20:21.862Z",
               "EditorCaption": ""
@@ -178,6 +166,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "ExpPoint.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\ExpPoint.cs",
+              "RelativeDocumentMoniker": "ioGame\\ExpPoint.cs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\ExpPoint.cs",
+              "RelativeToolTip": "ioGame\\ExpPoint.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAArwB4AAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T12:45:27.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\GameObject.cs",
               "RelativeDocumentMoniker": "ioGame\\GameObject.cs",
@@ -220,8 +220,7 @@
               "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\projektRozproszone\\agario\\ioGame\\ioGame\\Form1.cs [Projekt]",
               "RelativeToolTip": "ioGame\\Form1.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T11:19:35.57Z",
-              "EditorCaption": " [Projekt]"
+              "WhenOpened": "2024-03-28T11:19:35.57Z"
             },
             {
               "$type": "Document",
