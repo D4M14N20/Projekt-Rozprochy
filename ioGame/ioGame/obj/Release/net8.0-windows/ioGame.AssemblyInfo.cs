@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ioGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ff409f10aef7c121834f9c2f57335c6d7aaf89b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+450e39d0dfff3ddc29a7e0151bec614a9e95a4d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ioGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ioGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

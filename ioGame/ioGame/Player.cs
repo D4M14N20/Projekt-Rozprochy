@@ -44,7 +44,7 @@ namespace ioGame
             Size = 3.14f;
             //Size = ps.size;
             //Color = ps.color;
-            Drag = 1.0f;
+            Drag = 0.0f;
             Initialize();
         }
         private Pen borderPen = new Pen(Color.Gray, 5);
